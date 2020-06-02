@@ -339,7 +339,6 @@ class Reconciliation:
                     error+=1
 
             error_rate = error/self.n
-            print(error)
             if error_rate >= self.error_threshold:
                 self.abort()
                 
@@ -386,4 +385,5 @@ for i in range(len(a)):
         count += 1
 
 print("Weight of transmission: ", count)
+print("\nDistributed Keys:\nAlice: %s \nBob: %s\n" % ("".join(list(map(str, a))), "".join(list(map(str, a)))))
 print("Error rate: ", bb84.error_rate)
